@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-advance
+
+jwt:
+  secret:
+    key: c2VjcmV0LWtleS1zZWNyZXQta2V5LXNlY3JldC1rZXk=
+
