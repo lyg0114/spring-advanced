@@ -2,6 +2,8 @@ package org.example.expert.domain.todo.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+
+import org.example.expert.config.aop.AdminLog;
 import org.example.expert.domain.common.annotation.Auth;
 import org.example.expert.domain.common.dto.AuthUser;
 import org.example.expert.domain.todo.dto.request.TodoSaveRequest;
@@ -18,6 +20,7 @@ public class TodoController {
 
     private final TodoService todoService;
 
+    @AdminLog
     @PostMapping("/todos")
     public ResponseEntity<TodoSaveResponse> saveTodo(
             @Auth AuthUser authUser,
